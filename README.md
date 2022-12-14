@@ -220,7 +220,7 @@ example, if there's a unique index on `users.login` and a non-unique index on
 Supported configuration options:
 
 - `ignore_tables` - tables whose indexes should never be reported as extraneous.
-- `ignore_columns` - indexes that should never be reported as extraneous.
+- `ignore_indexes` - indexes that should never be reported as extraneous.
 
 ### Detecting Unindexed `deleted_at` Columns
 
@@ -390,7 +390,7 @@ This validator skips models whose corresponding database tables don't exist.
 Supported configuration options:
 
 - `ignore_models` - models whose underlying tables' columns should not be checked.
-- `ignore_columns` - specific attributes, written as Model.attribute, that should not be checked.
+- `ignore_attributes` - specific attributes, written as Model.attribute, that should not be checked.
 
 ### Detecting Incorrect Presence Validations on Boolean Columns
 
@@ -417,7 +417,7 @@ This validator skips models whose corresponding database tables don't exist.
 Supported configuration options:
 
 - `ignore_models` - models whose validators should not be checked.
-- `ignore_columns` - attributes, written as Model.attribute, whose validators should not be checked.
+- `ignore_attributes` - attributes, written as Model.attribute, whose validators should not be checked.
 
 ### Detecting Incorrect `dependent` Option on Associations
 
@@ -449,7 +449,7 @@ use `dependent: :destroy` or similar on Post.comments - the associated model has
 Supported configuration options:
 
 - `ignore_models` - models whose associations should not be checked.
-- `ignore_columns` - associations, written as Model.association, that should not be checked.
+- `ignore_associations` - associations, written as Model.association, that should not be checked.
 
 ### Detecting Primary Keys Having Short Integer Types
 
